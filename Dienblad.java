@@ -11,7 +11,7 @@ public class Dienblad {
     private Stack<Artikel> artikelen;
     
     /**
-    * Constructor
+    * Maakt een Dienblad instantie aan met een artikelen collectie. 
     */
     public Dienblad() 
     {

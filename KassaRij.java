@@ -12,7 +12,7 @@ public class KassaRij {
     private LinkedList<Persoon> personen;
         
     /**
-     * Constructor
+     * Maakt een KassaRij instantie aan met een nieuwe personen collectie. 
      */
     public KassaRij() {
         personen = new LinkedList<Persoon>();

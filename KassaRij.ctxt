@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=KassaRij()
-comment0.text=\r\n\ Constructor\r\n
+comment0.text=\r\n\ Maakt\ een\ KassaRij\ instantie\ aan\ met\ een\ nieuwe\ personen\ collectie.\ \r\n
 comment1.params=persoon
 comment1.target=void\ sluitAchteraan(Persoon)
 comment1.text=\r\n\ Persoon\ sluit\ achter\ in\ de\ rij\ aan\r\n\ @param\ persoon\r\n

@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Dienblad()
-comment0.text=\r\n\ Constructor\r\n
+comment0.text=\r\n\ Maakt\ een\ Dienblad\ instantie\ aan\ met\ een\ artikelen\ collectie.\ \r\n
 comment1.params=artikel
 comment1.target=void\ voegToe(Artikel)
 comment1.text=\r\n\ Methode\ om\ artikel\ aan\ dienblad\ toe\ te\ voegen\r\n\ @param\ artikel\r\n

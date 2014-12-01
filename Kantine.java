@@ -10,7 +10,7 @@ public class Kantine {
     private KassaRij kassarij;
     
     /**
-     * Constructor
+     * Maakt een kantine instantie aan met een KassaRij en een Kassa. 
      */
     public Kantine() {
         kassarij = new KassaRij();

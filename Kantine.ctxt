@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Kantine()
-comment0.text=\r\n\ Constructor\r\n
+comment0.text=\r\n\ Maakt\ een\ kantine\ instantie\ aan\ met\ een\ KassaRij\ en\ een\ Kassa.\ \r\n
 comment1.params=
 comment1.target=void\ loopPakSluitAan()
 comment1.text=\r\n\ In\ deze\ methode\ wordt\ een\ Persoon\ en\ Dienblad\r\n\ gemaakt\ en\ aan\ elkaar\r\n\ gekoppeld.\ Maak\ twee\ Artikelen\ aan\ en\ plaats\ \r\n\ deze\ op\ het\ dienblad.\ \ \ \r\n\ Tenslotte\ sluit\ de\ Persoon\ zich\ aan\ bij\ de\ rij\ \r\n\ voor\ de\ kassa.\r\n
