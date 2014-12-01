@@ -9,7 +9,7 @@ public class KantineSimulatie {
     private Kantine kantine;
     
     /**
-     * Constructor
+     * Maakt een KantineSimulatie instantie aan.
      */
     public KantineSimulatie() 
     {

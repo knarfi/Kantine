@@ -11,13 +11,8 @@ public class Dienblad {
     private Stack<Artikel> artikelen;
     
     /**
-<<<<<<< HEAD
-    * Maakt een Dienblad instantie aan met een artikelen collectie. 
-    */
-=======
-     * Constructor
+     * Maakt een Dienblad instantie aan met een artikelen collectie. 
      */
->>>>>>> 3317bdbc4d83877e8b3b2048c8f42cac0741247c
     public Dienblad() 
     {
         artikelen = new Stack<Artikel>();
