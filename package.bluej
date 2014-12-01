@@ -36,11 +36,19 @@ dependency9.from=Persoon
 dependency9.to=Artikel
 dependency9.type=UsesDependency
 objectbench.height=100
+<<<<<<< HEAD
 objectbench.width=955
 package.editor.height=581
 package.editor.width=1162
 package.editor.x=-8
 package.editor.y=-8
+=======
+objectbench.width=331
+package.editor.height=475
+package.editor.width=538
+package.editor.x=0
+package.editor.y=37
+>>>>>>> 3317bdbc4d83877e8b3b2048c8f42cac0741247c
 package.numDependencies=12
 package.numTargets=7
 package.showExtends=true
@@ -52,8 +60,8 @@ readme.editor.x=927
 readme.editor.y=196
 target1.editor.height=656
 target1.editor.width=801
-target1.editor.x=59
-target1.editor.y=139
+target1.editor.x=546
+target1.editor.y=166
 target1.height=50
 target1.name=Persoon
 target1.naviview.expanded=false
@@ -76,10 +84,17 @@ target2.typeParameters=
 target2.width=80
 target2.x=170
 target2.y=300
+<<<<<<< HEAD
 target3.editor.height=776
 target3.editor.width=1296
 target3.editor.x=-8
 target3.editor.y=-8
+=======
+target3.editor.height=700
+target3.editor.width=672
+target3.editor.x=0
+target3.editor.y=0
+>>>>>>> 3317bdbc4d83877e8b3b2048c8f42cac0741247c
 target3.height=50
 target3.name=KantineSimulatie
 target3.naviview.expanded=true
@@ -102,10 +117,17 @@ target4.typeParameters=
 target4.width=80
 target4.x=340
 target4.y=120
+<<<<<<< HEAD
 target5.editor.height=744
 target5.editor.width=1296
 target5.editor.x=-8
 target5.editor.y=-8
+=======
+target5.editor.height=726
+target5.editor.width=670
+target5.editor.x=1
+target5.editor.y=1
+>>>>>>> 3317bdbc4d83877e8b3b2048c8f42cac0741247c
 target5.height=50
 target5.name=Kantine
 target5.naviview.expanded=true

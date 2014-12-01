@@ -6,13 +6,17 @@
  */
 
 public class Kassa {
-    int aantalArtikelenAfgerekend;
-    double geldInKassa;
+    private int aantalArtikelenAfgerekend;
+    private double geldInKassa;
+    //private KassaRij kassarij;
     
     /**
-     * Constructor
+     * Maakt een instantie van Kassa waarbij er niks in de kassa zit
+     * en er nog geen artikelen afgerekend zijn.
+     * @param kassarij 
      */
     public Kassa(KassaRij kassarij) {
+        //this.kassarij = kassarij;
         aantalArtikelenAfgerekend = 0;
         geldInKassa = 0;
     }

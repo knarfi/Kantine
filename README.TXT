@@ -5,24 +5,25 @@ Week 1 - Opgave 1 b:
     initialisatie = de waarde wordt toegewezen aan de variable die eerder gedeclareerd is.
 
 Week 1 - Opgave 4 – Belangrijk verschil tussen primitieve typen en objecten.
-// Primitieve typen
-In in een primitieve type wordt de data direct opgeslagen.
+    // Primitieve typen
+    In in een primitieve type wordt de data direct opgeslagen.
+    
+    Voorbeeld:
+    Bij de primitieve type wordt de waarde van i gelijk veranderd zodra j aan i wordt toegekend. 
+    Deze waarde wordt direct opgeslagen in i en staat nu vast. 
+    Omdat j pas hierna veranderd wordt, krijgt i geen nieuwe waarde meer, i is immers al bepaald. 
+    
+    // Objecten
+    Omdat het bij een object type gaat om een verwijzing(referentie) naar een object worden de waarden niet direct 
+    opgeslagen maar wordt er een allias van het object gemaakt wanneer het wordt aangeroepen. 
+    Er kunnen op deze manier meerde waardes aan een object worden toegekend en de oorspronkelijke waarde van het object blijft in tact. 
+    Omdat de verwijzing pas op het moment van uitvoer de waarde bepaald worden ook latere veranderingen meegenomen. 
 
-Voorbeeld:
-Bij de primitieve type wordt de waarde van i gelijk veranderd zodra j aan i wordt toegekend. 
-Deze waarde wordt direct opgeslagen in i en staat nu vast. 
-Omdat j pas hierna veranderd wordt, krijgt i geen nieuwe waarde meer, i is immers al bepaald. 
-
-// Objecten
-Omdat het bij een object type gaat om een verwijzing(referentie) naar een object worden de waarden niet direct 
-opgeslagen maar wordt er een allias van het object gemaakt wanneer het wordt aangeroepen. 
-Er kunnen op deze manier meerde waardes aan een object worden toegekend en de oorspronkelijke waarde van het object blijft in tact. 
-Omdat de verwijzing pas op het moment van uitvoer de waarde bepaald worden ook latere veranderingen meegenomen. 
 
 Week 2 - Opgave 5a
-Je weet niet hoe lang de rij is en wanneer je moet stoppen. 
-Het einde kan bepaald worden door een voorwaarde. 
-Daarom gebruik je de while lus. 
+    Je weet niet hoe lang de rij is en wanneer je moet stoppen. 
+    Het einde kan bepaald worden door een voorwaarde. 
+    Daarom gebruik je de while lus. 
 
 
 
