@@ -13,7 +13,7 @@ public class KantineSimulatie {
      */
     public KantineSimulatie() 
     {
-        kantine=new Kantine();
+        kantine = new Kantine();
     }
     
     /**
@@ -23,6 +23,8 @@ public class KantineSimulatie {
      */
     public void simuleer(int dagen) 
     {
+        double totaal = 0;
+        
         // for lus voor dagen
         for(int dag = 1; dag <= dagen; dag++) {
             
@@ -37,11 +39,13 @@ public class KantineSimulatie {
             // toon dagtotalen (artikelen en geld in kassa)
             System.out.println("Er zijn in dag " + dag + 
                                 " " + kantine.aantalArtikelen() + " artikelen verkocht die samen " +
-                                " " + kantine.hoeveelheidGeldInKassa() + "euro opleveren."
+                                " " + kantine.hoeveelheidGeldInKassa() + " euro opleveren."
                                 );
-            
+            totaal += kantine.hoeveelheidGeldInKassa();
+                                
             // reset de kassa voor de volgende dag
             kantine.resetKassa();
         }
+        System.out.println("Er is in " + dagen + " dagen " + totaal + " euro verdiend.");
     }
 }

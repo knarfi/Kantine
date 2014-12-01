@@ -213,19 +213,19 @@ public class Persoon {
     */
     public String getGeslacht() 
     {
-        String temp;
+        String geslacht;
         
-        if(geslacht == 'm'){
-            temp = "Man";
+        if(this.geslacht == 'm'){
+            geslacht = "Man";
         }
-        else if(geslacht == 'v'){
-            temp = "Vrouw";
+        else if(this.geslacht == 'v'){
+            geslacht = "Vrouw";
         } 
         else {
-            temp = "Onbekend";
+            geslacht = "Onbekend";
         }
         
-        return temp;
+        return geslacht;
     }
     
     /**

@@ -6,8 +6,8 @@
  */
 
 public class Kassa {
-    int aantalArtikelenAfgerekend;
-    double geldInKassa;
+    private int aantalArtikelenAfgerekend;
+    private double geldInKassa;
     
     /**
      * Constructor
