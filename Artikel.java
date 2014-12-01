@@ -23,7 +23,8 @@ public class Artikel
     }
     
     /**
-     * Constructor voor de class Artikel
+     * Constructor voor de class Artikel, de insantie vaiablen
+     * krijgen een standaard waarde.
      */
     public Artikel() 
     {
