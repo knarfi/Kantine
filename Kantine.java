@@ -2,7 +2,7 @@
  * Deze klasse bevat informatie over hoe de kantine werkt. 
  * 
  * @autheur Rick van der Poel en Frank Noorlander
- * @versie 29-11-2014
+ * @versie 1/12/2014
  */
 
 public class Kantine {
@@ -27,7 +27,7 @@ public class Kantine {
      */
     public void loopPakSluitAan() {
         Dienblad dienblad = new Dienblad();
-        Artikel aardappel = new Artikel("aardappel", 2.60);
+        Artikel aardappel = new Artikel("aardappel", 2.68);
         Artikel worst = new Artikel("worst", 5.00);
         Persoon rick = new Persoon(2321890, "Rick", "van der Poel", 31, 7, 1989, 'm');
         

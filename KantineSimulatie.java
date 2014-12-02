@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 /**
  * Deze klasse bevat informatie de simulatie van de kantine.
  * 
@@ -25,6 +27,9 @@ public class KantineSimulatie {
     {
         double totaal = 0;
         
+        //zorgt ervoor dat er 2.20 komt en niet 2.2
+        DecimalFormat df = new DecimalFormat("#.00");
+        
         // for lus voor dagen
         for(int dag = 1; dag <= dagen; dag++) {
             
@@ -35,17 +40,17 @@ public class KantineSimulatie {
             
             // verwerk rij voor de kassa
             kantine.verwerkRijVoorKassa();
-            
+           
             // toon dagtotalen (artikelen en geld in kassa)
             System.out.println("Er zijn in dag " + dag + 
                                 " " + kantine.aantalArtikelen() + " artikelen verkocht die samen " +
-                                " " + kantine.hoeveelheidGeldInKassa() + " euro opleveren."
+                                " " + df.format(kantine.hoeveelheidGeldInKassa()) + " euro opleveren."
                                 );
             totaal += kantine.hoeveelheidGeldInKassa();
                                 
             // reset de kassa voor de volgende dag
             kantine.resetKassa();
         }
-        System.out.println("Er is in " + dagen + " dagen " + totaal + " euro verdiend.");
+        System.out.println("Er is in " + dagen + " dagen " + df.format(totaal) + " euro verdiend.");
     }
 }
