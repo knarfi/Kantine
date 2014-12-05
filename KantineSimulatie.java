@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.text.DecimalFormat;
 
 public class KantineSimulatie {
     // kantine
@@ -11,27 +12,27 @@ public class KantineSimulatie {
     private Random random;
     
     // aantal artikelen
-    private static final int AANTAL_ARTIKELEN=4;
+    public static final int AANTAL_ARTIKELEN = 6;
     
     // artikelen
     private static final String[] artikelnamen=
-    new String[] {"Koffie", "Broodje hamburger", "Broodje kaas", "Melk"};
+    new String[] {"Koffie", "Broodje hamburger", "Broodje kaas", "Melk", "Water", "Snelle Jelle"};
     
     // prijzen
     private static double[] artikelprijzen=
-    new double[]{1.50, 2.10, 1.65, 1.65};   
+    new double[]{1.50, 2.10, 1.65, 1.65, 1,00, 2,50};   
     
     // minimum en maximum aantal artikelen per soort
-    private static final int MIN_ARTIKELEN_PER_SOORT=10000;
-    private static final int MAX_ARTIKELEN_PER_SOORT=20000;
+    public static final int MIN_ARTIKELEN_PER_SOORT = 10000;
+    public static final int MAX_ARTIKELEN_PER_SOORT = 20000;
     
     // minimum en maximum aantal personen per dag
-    private static final int MIN_PERSONEN_PER_DAG=50;
-    private static final int MAX_PERSONEN_PER_DAG=100;
+    public static final int MIN_PERSONEN_PER_DAG = 50;
+    public static final int MAX_PERSONEN_PER_DAG = 100;
     
     // minimum en maximum artikelen per persoon
-    private static final int MIN_ARTIKELEN_PER_PERSOON=1;
-    private static final int MAX_ARTIKELEN_PER_PERSOON=4;
+    public static final int MIN_ARTIKELEN_PER_PERSOON = 1;
+    public static final int MAX_ARTIKELEN_PER_PERSOON = 4;
     
     /**
      * Constructor
@@ -41,7 +42,7 @@ public class KantineSimulatie {
         kantine = new Kantine();
         random = new Random();
         int[] hoeveelheden = getRandomArray(
-        AANTAL_ARTIKELEN,MIN_ARTIKELEN_PER_SOORT, MAX_ARTIKELEN_PER_SOORT);
+        AANTAL_ARTIKELEN, MIN_ARTIKELEN_PER_SOORT, MAX_ARTIKELEN_PER_SOORT);
         kantineaanbod = new KantineAanbod(artikelnamen, artikelprijzen, 
         hoeveelheden); 
         kantine.setKantineAanbod(kantineaanbod);
@@ -98,16 +99,22 @@ public class KantineSimulatie {
      */
     public void simuleer(int dagen) 
     {
+        //zorgt ervoor dat er 2.20 komt en niet 2.2
+        DecimalFormat df = new DecimalFormat("#.00");
+        
         // for lus voor dagen
         for(int i = 0; i < dagen; i++) {
             // bedenk hoeveel personen vandaag binnen lopen
-            int aantalpersonen = getRandomValue(1, 20);
+            int aantalpersonen = getRandomValue(MIN_PERSONEN_PER_DAG, MAX_PERSONEN_PER_DAG);
             
             // laat de personen maar komen...
             for(int j = 0; j < aantalpersonen; j++) {
                 // maak persoon en dienblad aan, koppel ze
+                Persoon persoon = new Persoon();
+                persoon.pakDienblad(new Dienblad());
+                
                 // bedenk hoeveel artikelen worden gepakt
-                int aantalartikelen = getRandomValue(1, 10);
+                int aantalartikelen = getRandomValue(MIN_ARTIKELEN_PER_PERSOON, MAX_ARTIKELEN_PER_PERSOON);
                 
                 // genereer de “artikelnummers”, dit zijn indexen 
                 // van de artikelnamen array  
@@ -119,12 +126,22 @@ public class KantineSimulatie {
                 
                 // loop de kantine binnen, pak de gewenste 
                 // artikelen, sluit aan
+                kantine.loopPakSluitAan(persoon, artikelen);
             }
             
             // verwerk rij voor de kassa
+            kantine.verwerkRijVoorKassa();
+            
             // druk de dagtotalen af en hoeveel personen binnen 
             // zijn gekomen
+            System.out.println("Dag: " + (i + 1));
+            System.out.println("Er zijn vandaag " + aantalpersonen + 
+                                " personen gekomen die samen " + df.format(kantine.getKassa().getGeldInKassa()) +
+                                " euro aan proucten hebben gekocht");
+            System.out.println();
+            
             // reset de kassa voor de volgende dag
+            kantine.getKassa().resetKassa();
         }
     }
 }

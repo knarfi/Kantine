@@ -60,4 +60,19 @@ public class KantineAanbod {
     public Artikel getArtikel(String naam) {
         return getArtikel(getArrayList(naam));
     }
+    
+    /**
+     * Checkt of er van het artikel bijbesteld moet worden op basis van het minimale
+     * aantal producten dat er moet zijn
+     * @param   artikel artikel dat gechecked moet worden
+     */
+    public void checkHoeveelheid(Artikel artikel){
+        int minimum = KantineSimulatie.MIN_ARTIKELEN_PER_SOORT;
+        //oo- d00r de HashMap aanbod
+        //kijk bij elke iteration of de key(de naaam) gelijk is aan de naam van het gegeven artikel
+        //als dat zo is dan +1 in de counter voor het artikel
+        //aan het einde heb je dan een counter met het aantal van het gevraagde artikel
+        //vergelijk dit daarna met de minimum waarde, zodra het minimm groter is dan de atuele waarde
+        //voeg dan artikelen toe aan de hashmap, het aantal dat toegevoegd moet worden is een standaar aantal
+    }
 }

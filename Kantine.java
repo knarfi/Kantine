@@ -34,6 +34,7 @@ public class Kantine {
             
             // Voeg het artikel toe aan het dienblad van het de persoon.
             persoon.pakArtikel(artikel); 
+            kantineAanbod.checkHoeveelheid(artikel);
             
             // Sluit de persoon achteraan de kassa rij.
             kassarij.sluitAchteraan(persoon);  
