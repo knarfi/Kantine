@@ -25,10 +25,33 @@ Week 2 - Opgave 5a
     Het einde kan bepaald worden door een voorwaarde. 
     Daarom gebruik je de while lus. 
     
+<<<<<<< HEAD
 Week 3 - opgave 1a
     hoeveelheidGeldInKassa()
     aantalArtikelen()
     resetKassa()
+=======
+Week 3 - Opgave 2a
+    Deze worden alleen gebruikt door de klasse KantineAanbod en niet door andere klassen.
+    De gebruiker heeft verder niks nodig met de implementatie van de klasse en hoeft alleen
+    de interface te zien. Daarom maken we het veld privaat omdat er geen andere klasse zijn die 
+    er gebruik van maken. 
+    
+Week 3 - Opgave 2b
+    Een Set is een ongeorderde collectie en een map is een collectie met sleutelwaarden die 
+    gelinked zijn aan de items. 
+
+    Voorbeelden:
+    HashSet is bijv. {1,2,3,4,5}
+    HashMap gebruikt sleutelwaarde bij elk item: {a->1,b->2,c->3,d->4,e->5}
+    
+    Een HashMap gebruik je wanneer je een waarde aan een unieke naam wilt koppelen. 
+    Bijv een telefoon boek heeft nummers gekoppeld aan een naam. 
+    De naam weet je vaak wel dus kun je die gebruiken om het bijbehorende nummer te zoeken.
+    
+    Een HashSet gebruik je 
+
+>>>>>>> 35dfbbb82f47834c9303919adc99437139f0126b
 
 
 
