@@ -81,7 +81,6 @@ public class Kassa {
         double totaal = 0;
         for( ; artikelen.hasNext(); ){
             totaal += artikelen.next().getPrijs();
-            artikelen.remove();
         }
         
         return totaal;

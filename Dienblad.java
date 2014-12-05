@@ -37,28 +37,4 @@ public class Dienblad {
     public Iterator<Artikel> getArtikelen(){
         return artikelen.iterator();
     }
-    
-//    /**
-//     * Methode om aantal artikelen op dienblad te tellen
-//     * @return Het aantal artikelen 
-//     */
-//    public int getAantalArtikelen() 
-//    {
-//        return artikelen.size();
-//    }
-    
-//    /**
-//     * Methode om de totaalprijs van de artikelen 
-//     * op dienblad uit te rekenen
-//     * @return De totaalprijs
-//     */
-//    public double getTotaalPrijs() 
-//    {
-//        double totaal = 0;
-//        for(Artikel artikel : artikelen){
-//            totaal += artikel.getPrijs();
-//        }
-//        
-//        return totaal;
-//    }
 }
