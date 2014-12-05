@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 /**
  * Deze klasse bevat informatie over hoe de kassa werkt. 
  * 
@@ -6,7 +8,7 @@
  */
 
 public class Kassa {
-    private int aantalArtikelenAfgerekend;
+    private int artikelenAfgerekend;
     private double geldInKassa;
     //private KassaRij kassarij;
     
@@ -17,7 +19,7 @@ public class Kassa {
      */
     public Kassa(KassaRij kassarij) {
         //this.kassarij = kassarij;
-        aantalArtikelenAfgerekend = 0;
+        artikelenAfgerekend = 0;
         geldInKassa = 0;
     }
     
@@ -28,8 +30,8 @@ public class Kassa {
      * @param persoon die moet afrekenen
      */
     public void rekenAf(Persoon persoon) {
-        aantalArtikelenAfgerekend += persoon.getAantalArtikelen();
-        geldInKassa += persoon.getTotaalPrijs();
+        artikelenAfgerekend += artikelenOpDienblad(persoon);
+        geldInKassa += totaalPrijsDienblad(persoon);
     }
     
     /**
@@ -39,8 +41,8 @@ public class Kassa {
      * is aangeroepen.
      * @return aantal artikelen
      */
-    public int aantalArtikelen() {
-        return aantalArtikelenAfgerekend;
+    public int getArtikelenAfgerekend() {
+        return artikelenAfgerekend;
     }
     
     /**
@@ -50,7 +52,7 @@ public class Kassa {
      * is aangeroepen.
      * @return hoeveelheid geld in de kassa
      */
-    public double hoeveelheidGeldInKassa() {
+    public double getGeldInKassa() {
         return geldInKassa;
     }
     
@@ -59,8 +61,30 @@ public class Kassa {
      * de totale hoeveelheid geld in de kassa.
      */
     public void resetKassa() {
-        aantalArtikelenAfgerekend = 0;
+        artikelenAfgerekend = 0;
         geldInKassa = 0;
+    }
+    
+    public int artikelenOpDienblad(Persoon persoon){
+        Iterator artikelen = persoon.getDienblad().getArtikelen();
+        int aantal = 0;
+        while(artikelen.hasNext()){
+            aantal++;
+            artikelen.next();
+        }
+        
+        return aantal;
+    }
+    
+    public double totaalPrijsDienblad(Persoon persoon){
+        Iterator<Artikel> artikelen = persoon.getDienblad().getArtikelen();
+        double totaal = 0;
+        for( ; artikelen.hasNext(); ){
+            totaal += artikelen.next().getPrijs();
+            artikelen.remove();
+        }
+        
+        return totaal;
     }
 }
 

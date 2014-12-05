@@ -43,13 +43,13 @@ public class KantineSimulatie {
            
             // toon dagtotalen (artikelen en geld in kassa)
             System.out.println("Er zijn in dag " + dag + 
-                                " " + kantine.aantalArtikelen() + " artikelen verkocht die samen " +
-                                " " + df.format(kantine.hoeveelheidGeldInKassa()) + " euro opleveren."
+                                " " + kantine.getKassa().getArtikelenAfgerekend() + " artikelen verkocht die samen " +
+                                " " + df.format(kantine.getKassa().getGeldInKassa()) + " euro opleveren."
                                 );
-            totaal += kantine.hoeveelheidGeldInKassa();
+            totaal += kantine.getKassa().getGeldInKassa();
                                 
             // reset de kassa voor de volgende dag
-            kantine.resetKassa();
+            kantine.getKassa().resetKassa();
         }
         System.out.println("Er is in " + dagen + " dagen " + df.format(totaal) + " euro verdiend.");
     }

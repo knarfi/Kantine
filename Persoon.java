@@ -13,7 +13,7 @@ public class Persoon {
     private String achternaam;
     private int geboorteDag ,geboorteMaand, geboorteJaar;
     private char geslacht;
-    private Dienblad dienblad = null;
+    private Dienblad dienblad;
     
     /**
     * CONSTRUCTOR
@@ -27,6 +27,7 @@ public class Persoon {
         setAchternaam(achternaam);
         setGeslacht(geslacht);
         setGeboorteDatum(geboorteDag, geboorteMaand, geboorteJaar);
+        dienblad = null;
     }
 
     /**
@@ -40,6 +41,7 @@ public class Persoon {
         setAchternaam("onbekend");
         setGeslacht('x');
         setGeboorteDatumToNull();
+        dienblad = null;
     }
       
     /**
@@ -260,22 +262,11 @@ public class Persoon {
     }
     
     /**
-     * Methode om de totaalprijs van de artikelen
-     * op dienblad dat bij de persoon hoort uit te rekenen
-     * @return De totaalprijs
+     * geeft het dienblad van de persoon, als er geen dienblad is komt er een null terug
+     * 
+     * @return  dienblad van de persoon
      */
-    public double getTotaalPrijs() 
-    {
-        return dienblad.getTotaalPrijs();
-    }
-    
-    /**
-     * Methode om het aantal artikelen op dienblad dat bij de
-     * persoon hoort te tellen
-     * @return Het aantal artikelen
-     */
-    public int getAantalArtikelen() 
-    {
-        return dienblad.getAantalArtikelen();
+    public Dienblad getDienblad(){
+        return dienblad;
     }
 }

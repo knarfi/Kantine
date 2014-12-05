@@ -24,7 +24,11 @@ Week 2 - Opgave 5a
     Je weet niet hoe lang de rij is en wanneer je moet stoppen. 
     Het einde kan bepaald worden door een voorwaarde. 
     Daarom gebruik je de while lus. 
-
+    
+Week 3 - opgave 1a
+    hoeveelheidGeldInKassa()
+    aantalArtikelen()
+    resetKassa()
 
 
 
