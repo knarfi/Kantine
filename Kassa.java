@@ -65,6 +65,11 @@ public class Kassa {
         geldInKassa = 0;
     }
     
+    /**
+     * geeft het aantal artikelen op het dienblad van de persoon
+     * 
+     * @return  aantal artikelen
+     */
     public int artikelenOpDienblad(Persoon persoon){
         Iterator artikelen = persoon.getDienblad().getArtikelen();
         int aantal = 0;
@@ -76,6 +81,11 @@ public class Kassa {
         return aantal;
     }
     
+    /**
+     * geeft de totaalprijs van de artikelen op het dienblad van de persoon
+     * 
+     * @return  totaalprijs van dienblad
+     */
     public double totaalPrijsDienblad(Persoon persoon){
         Iterator<Artikel> artikelen = persoon.getDienblad().getArtikelen();
         double totaal = 0;

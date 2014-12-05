@@ -25,12 +25,12 @@ Week 2 - Opgave 5a
     Het einde kan bepaald worden door een voorwaarde. 
     Daarom gebruik je de while lus. 
     
-<<<<<<< HEAD
+
 Week 3 - opgave 1a
     hoeveelheidGeldInKassa()
     aantalArtikelen()
     resetKassa()
-=======
+
 Week 3 - Opgave 2a
     Deze worden alleen gebruikt door de klasse KantineAanbod en niet door andere klassen.
     De gebruiker heeft verder niks nodig met de implementatie van de klasse en hoeft alleen
@@ -49,10 +49,24 @@ Week 3 - Opgave 2b
     Bijv een telefoon boek heeft nummers gekoppeld aan een naam. 
     De naam weet je vaak wel dus kun je die gebruiken om het bijbehorende nummer te zoeken.
     
-    Een HashSet gebruik je 
-
->>>>>>> 35dfbbb82f47834c9303919adc99437139f0126b
-
+    Een HashSet gebruik je wanneer je een ballenbak wil maken, je kan kijken hoeveel
+    ballen er in de ballenbak zitten maar de volgorde waarin ze zitten maakt niet uit
+    
+Week 3 - Opgave 3a
+    een constructor wordt aageroepen wanneer een object gemaakt wordt en
+    geeft de instantie variablen een waarde
+    
+Week 3 - Opgave 3b
+    Leg de implementatie van int getRandomValue(int min, int max) 
+    uit en met name waarom er +1 in voorkomt. 
+    Gebruik de Java API. Hint: denk aan de bete- kenis van inclusief en exclusief. 
+    
+    De methode roept de methode van een instantie vn de klas Random aan die een willekeurige
+    waarde teruggeeft tussen 0 en het meegegeven argument.
+    Het argument is de het maximale nummer - het minimale nummer, stel je wil een nummer
+    tussen de 5 en 10 dan krijg je 5, dit betekent dat je nummers krijgt tussen 0(incl) 
+    en 5(excl). Wanneer je +1 doet krijg je nummers tussen 1(incl) en 5 (incl). Als je
+    hier nog het minimale getal bij doet (in dit geval 5) krijg je getallen tussen 5 en 10.
 
 
 Tests voor geboortedatum:
