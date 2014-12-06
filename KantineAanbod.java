@@ -10,7 +10,8 @@ public class KantineAanbod {
      * is een lijst met hoeveelheden. Let op: de dimensies van de drie arrays
      * moeten wel gelijk zijn!
      */
-    public KantineAanbod(String[] artikelnaam, double[] prijs, int[] hoeveelheid) {
+    public KantineAanbod(String[] artikelnaam, double[] prijs, int[] hoeveelheid) 
+    {
         aanbod = new HashMap<String, ArrayList<Artikel>>();
         for(int i = 0; i < artikelnaam.length; i++) 
         {
@@ -27,7 +28,8 @@ public class KantineAanbod {
      * Private methode om de lijst van artikelen te krijgen op basis van de    
      * naam van het artikel. Retourneert null als artikel niet bestaat.
      */
-    private ArrayList<Artikel> getArrayList(String productnaam) {
+    private ArrayList<Artikel> getArrayList(String productnaam) 
+    {
          return aanbod.get(productnaam); 
     }
 
@@ -35,7 +37,8 @@ public class KantineAanbod {
      * Private methode om een Artikel van de stapel artikelen af te pakken. 
      * Retourneert null als de stapel leeg is.
      */
-    private Artikel getArtikel(ArrayList<Artikel> stapel) {
+    private Artikel getArtikel(ArrayList<Artikel> stapel) 
+    {
         if (stapel == null) { 
             return null;
         }
@@ -57,7 +60,8 @@ public class KantineAanbod {
      * @param naam (van artikel)
      * @return artikel (of null)
      */
-    public Artikel getArtikel(String naam) {
+    public Artikel getArtikel(String naam) 
+    {
         return getArtikel(getArrayList(naam));
     }
     
@@ -66,13 +70,30 @@ public class KantineAanbod {
      * aantal producten dat er moet zijn
      * @param   artikel artikel dat gechecked moet worden
      */
-    public void checkHoeveelheid(Artikel artikel){
-        int minimum = KantineSimulatie.MIN_ARTIKELEN_PER_SOORT;
-        //oo- d00r de HashMap aanbod
-        //kijk bij elke iteration of de key(de naaam) gelijk is aan de naam van het gegeven artikel
-        //als dat zo is dan +1 in de counter voor het artikel
-        //aan het einde heb je dan een counter met het aantal van het gevraagde artikel
-        //vergelijk dit daarna met de minimum waarde, zodra het minimm groter is dan de atuele waarde
-        //voeg dan artikelen toe aan de hashmap, het aantal dat toegevoegd moet worden is een standaar aantal
+    public void checkHoeveelheid(Artikel artikel)
+    {
+        int aanwezig = 0;
+        
+        //bekijk het hele aanbod
+        for(Map.Entry<String , ArrayList<Artikel>> artikelAanbod: aanbod.entrySet()){
+            
+            //als de naam van het artikel waar we nu zijn gelijk is aan de naam die we zoeken
+            if(artikelAanbod.getKey().equals(artikel.getNaam())){
+                
+                //bekijk hoeveel er nog is van het artikel
+                for(Artikel actueelArtikel : artikelAanbod.getValue()){
+                    aanwezig++;
+                }
+            }
+        }
+        
+        //als het aantal aanwezige artikelen lager is dan dat het zou moeten zijn
+        if(aanwezig < KantineSimulatie.MIN_ARTIKELEN_PER_SOORT){
+            
+            //vul het aantal artikelen tot MIN_ARTIKELEN_PER_SOORT + 100 aan
+            for(int i = 0; i < 100; i++){
+                aanbod.get(artikel.getNaam()).add(new Artikel(artikel.getNaam(), artikel.getPrijs()));
+            }
+        }
     }
 }

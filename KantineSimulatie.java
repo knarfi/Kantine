@@ -24,7 +24,7 @@ public class KantineSimulatie {
     
     // minimum en maximum aantal artikelen per soort
     public static final int MIN_ARTIKELEN_PER_SOORT = 10000;
-    public static final int MAX_ARTIKELEN_PER_SOORT = 20000;
+    public static final int MAX_ARTIKELEN_PER_SOORT = 11000;
     
     // minimum en maximum aantal personen per dag
     public static final int MIN_PERSONEN_PER_DAG = 50;
