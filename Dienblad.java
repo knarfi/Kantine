@@ -4,7 +4,7 @@ import java.util.Iterator;
 /**
  * Deze klasse bevat informatie over een eventueel dienblad, een dienblad bevat artikelen
  * 
- * @autheur Frank Noorlander
+ * @autheur Frank Noorlander en Rick van der Poel
  * @versie 29-11-2014
  */
 

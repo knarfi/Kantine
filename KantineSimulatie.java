@@ -1,6 +1,13 @@
 import java.util.Random;
 import java.text.DecimalFormat;
 
+/**
+ * Deze klasse bevat informatie over de kantineSimulatie. Deze klasse simuleert de werking van een kantine.
+ * 
+ * @autheur Frank Noorlander & Rick van der Poel
+ * @versie 08/12/2014
+ */
+
 public class KantineSimulatie {
     // kantine
     private Kantine kantine;
@@ -12,27 +19,27 @@ public class KantineSimulatie {
     private Random random;
     
     // aantal artikelen
-    public static final int AANTAL_ARTIKELEN = 6;
+    private static final int AANTAL_ARTIKELEN = 6;
     
     // artikelen
-    private static final String[] artikelnamen=
+    private static final String[] artikelnamen = 
     new String[] {"Koffie", "Broodje hamburger", "Broodje kaas", "Melk", "Water", "Snelle Jelle"};
     
     // prijzen
-    private static double[] artikelprijzen=
+    private static double[] artikelprijzen =
     new double[]{1.50, 2.10, 1.65, 1.65, 1,00, 2,50};   
     
     // minimum en maximum aantal artikelen per soort
-    public static final int MIN_ARTIKELEN_PER_SOORT = 10000;
-    public static final int MAX_ARTIKELEN_PER_SOORT = 20000;
+    private static final int MIN_ARTIKELEN_PER_SOORT = 10000;
+    private static final int MAX_ARTIKELEN_PER_SOORT = 20000;
     
     // minimum en maximum aantal personen per dag
-    public static final int MIN_PERSONEN_PER_DAG = 50;
-    public static final int MAX_PERSONEN_PER_DAG = 100;
+    private static final int MIN_PERSONEN_PER_DAG = 50;
+    private static final int MAX_PERSONEN_PER_DAG = 100;
     
     // minimum en maximum artikelen per persoon
-    public static final int MIN_ARTIKELEN_PER_PERSOON = 1;
-    public static final int MAX_ARTIKELEN_PER_PERSOON = 4;
+    private static final int MIN_ARTIKELEN_PER_PERSOON = 1;
+    private static final int MAX_ARTIKELEN_PER_PERSOON = 4;
     
     /**
      * Constructor

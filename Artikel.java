@@ -1,7 +1,7 @@
 /**
  * Deze klasse bevat informatie over artikelen in de kantine
  * 
- * @author Frank Noorlander
+ * @author Frank Noorlander en Rick van der Poel
  * @version 29/11/2014
  */
 public class Artikel

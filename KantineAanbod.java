@@ -95,7 +95,7 @@ public class KantineAanbod {
         }
         
         //als het aantal aanwezige artikelen lager is dan dat het zou moeten zijn
-        if(aanwezig < KantineSimulatie.MIN_ARTIKELEN_PER_SOORT){
+        if(aanwezig < 10000){
             
             //vul het aantal artikelen tot MIN_ARTIKELEN_PER_SOORT + 100 aan
             for(int i = 0; i < 100; i++){
