@@ -1,5 +1,14 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
+/**
+ * Deze klasse bevat informatie over het kantineaanbod. Elk artikel is een instantie van de classe Artikel en zit
+ * in de HashMap aanbod.
+ * 
+ * @autheur Frank Noorlander & Rick van der Poel
+ * @versie 08/12/2014
+ */
 public class KantineAanbod {
     // interne opslag voorraad
     private HashMap<String, ArrayList<Artikel>> aanbod;
@@ -81,9 +90,7 @@ public class KantineAanbod {
             if(artikelAanbod.getKey().equals(artikel.getNaam())){
                 
                 //bekijk hoeveel er nog is van het artikel
-                for(Artikel actueelArtikel : artikelAanbod.getValue()){
-                    aanwezig++;
-                }
+                aanwezig = artikelAanbod.getValue().size();
             }
         }
         

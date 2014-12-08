@@ -24,7 +24,7 @@ public class KantineSimulatie {
     
     // minimum en maximum aantal artikelen per soort
     public static final int MIN_ARTIKELEN_PER_SOORT = 10000;
-    public static final int MAX_ARTIKELEN_PER_SOORT = 11000;
+    public static final int MAX_ARTIKELEN_PER_SOORT = 20000;
     
     // minimum en maximum aantal personen per dag
     public static final int MIN_PERSONEN_PER_DAG = 50;
@@ -137,7 +137,7 @@ public class KantineSimulatie {
             System.out.println("Dag: " + (i + 1));
             System.out.println("Er zijn vandaag " + aantalpersonen + 
                                 " personen gekomen die samen " + df.format(kantine.getKassa().getGeldInKassa()) +
-                                " euro aan proucten hebben gekocht");
+                                " euro aan producten hebben gekocht");
             System.out.println();
             
             // reset de kassa voor de volgende dag
