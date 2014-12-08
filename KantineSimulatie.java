@@ -2,7 +2,8 @@ import java.util.Random;
 import java.text.DecimalFormat;
 
 /**
- * Deze klasse bevat informatie over de kantineSimulatie. Deze klasse simuleert de werking van een kantine.
+ * Deze klasse bevat informatie over de kantineSimulatie.
+ * Deze klasse simuleert de werking van een kantine.
  * 
  * @autheur Frank Noorlander & Rick van der Poel
  * @versie 08/12/2014
