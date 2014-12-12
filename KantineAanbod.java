@@ -79,7 +79,7 @@ public class KantineAanbod {
      * aantal producten dat er moet zijn
      * @param   artikel artikel dat gechecked moet worden
      */
-    public void checkHoeveelheid(Artikel artikel)
+    public void checkHoeveelheid(String naam, double prijs)
     {
         int aanwezig = 0;
         
@@ -87,20 +87,16 @@ public class KantineAanbod {
         for(Map.Entry<String , ArrayList<Artikel>> artikelAanbod: aanbod.entrySet()){
             
             //als de naam van het artikel waar we nu zijn gelijk is aan de naam die we zoeken
-            if(artikelAanbod.getKey().equals(artikel.getNaam())){
+            if(artikelAanbod.getKey().equals(naam)){
                 
                 //bekijk hoeveel er nog is van het artikel
                 aanwezig = artikelAanbod.getValue().size();
             }
         }
         
-        //als het aantal aanwezige artikelen lager is dan dat het zou moeten zijn
-        if(aanwezig < 10000){
-            
-            //vul het aantal artikelen tot MIN_ARTIKELEN_PER_SOORT + 100 aan
-            for(int i = 0; i < 100; i++){
-                aanbod.get(artikel.getNaam()).add(new Artikel(artikel.getNaam(), artikel.getPrijs()));
-            }
+        //vul het aantal artikelen tot MIN_ARTIKELEN_PER_SOORT aan
+        for(int i = aanwezig; i < 10000; i++){
+            aanbod.get(naam).add(new Artikel(naam, prijs));
         }
     }
 }

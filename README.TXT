@@ -67,8 +67,35 @@ Week 3 - Opgave 3b
     tussen de 5 en 10 dan krijg je 5, dit betekent dat je nummers krijgt tussen 0(incl) 
     en 5(excl). Wanneer je +1 doet krijg je nummers tussen 1(incl) en 5 (incl). Als je
     hier nog het minimale getal bij doet (in dit geval 5) krijg je getallen tussen 5 en 10.
+    
+Week 4 - Opgave 1c
+    Als je zelf geen constructor maakt wordt dit voor jou gedaan.
+    
+Week 4 - Opgave 1d
+    Deze methodes hebben geen invloed op de instance variables van Administratie (de staat van het object).
+    dus deze methodes kunnen static zijn.
+    
+Week 4 - Opgave 1e
+    Als iets private is kan het alleen aangeroepen worden binnen de klas, als je dus een nieuw
+    object aanmaakt en daarmee de private constructor aanroept zal deze een fout teruggeven.
+    
+week 4 - Opgave 1g
+    zie project folder
+    
+week 4 - Opgave 1h
+    Het keyword final zorgt ervoor dat de waarde achteraf niet meer veranderd kan worden.
+    
+week 4 - Opgave 1i
+    de compiler klaagt hierover omdat statische methodes niet bij een specefieke instantie horen van
+    de classe. Wanneer je dan een variable aanroept weet java niet uit welke instance die gehaald moet
+    worden. Wanneer een variable static is hoort deze ook bij de clas en niet bij een instantie en 
+    is er dus maar 1 van.
 
-
+week 4 - Opgave 1j
+    Dat DAYS_IN_WEEK nu niet meer een constante variable is. Het doel van deze variable was een vaste
+    waarde te introduceren zodat deze in de classe gebruikt kon worden, de waarde is nu niet meer vast.
+    
+    
 Tests voor geboortedatum:
 Tests       verwachting resultaat   resultaat2
 19/5/2014   wel         wel         wel
