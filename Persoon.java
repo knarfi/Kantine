@@ -16,8 +16,20 @@ public class Persoon {
     private Dienblad dienblad;
     
     /**
-    * CONSTRUCTOR
-    * Voer BSN, voornaam, achternaam, geboortedatum en geslacht van de persoon in. 
+    * Maakt een persoon aan met standaard waarden.  
+    */
+    public Persoon()
+    {
+        setBsn(0);
+        setVoornaam("onbekend");
+        setAchternaam("onbekend");
+        setGeslacht('x');
+        setGeboorteDatumToNull();
+        dienblad = null;
+    }
+    
+    /**
+    * Maakt een persoon aan met de opgegeven paramaters.  
     */
     public Persoon(int bsn, String voornaam, String achternaam, int geboorteDag, int geboorteMaand, int geboorteJaar, char geslacht)
     {
@@ -29,21 +41,7 @@ public class Persoon {
         setGeboorteDatum(geboorteDag, geboorteMaand, geboorteJaar);
         dienblad = null;
     }
-
-    /**
-    * CONSTRUCTOR 2
-    * Parameterloze constructor met standaard waarden.  
-    */
-    public Persoon()
-    {
-        setBsn(0);
-        setVoornaam("onbekend");
-        setAchternaam("onbekend");
-        setGeslacht('x');
-        setGeboorteDatumToNull();
-        dienblad = null;
-    }
-      
+     
     /**
     * SETTER
     * Methode om een BSN nummer van een persoon te veranderen.  
@@ -235,10 +233,10 @@ public class Persoon {
     */
     public void drukAf()
     {
-        System.out.println(getVoornaam() + " " + getAchternaam() + " liep in het donkere bos.");
-        System.out.println("Plots bedacht hij zich zijn BSN nummer: " + getBSN() + " zo'n mooi nummer had hij nog nooit gezien.");
-        System.out.println("Waarschijnlijk kwam dat omdat zijn geboortedatum ook zo prachtig was, wat is nou beter dan " + getGeboorteDatum() + "!");
-        System.out.println("En omdat zijn geslacht " + getGeslacht() + " was kon er niks meer stuk gaan die dag");
+        System.out.println("Volledige naam: " + getVoornaam() + " " + getAchternaam());
+        System.out.println("BSN nummer: " + getBSN());
+        System.out.println("Geboortedatum: " + getGeboorteDatum());
+        System.out.println("Geslacht: " + getGeslacht());
     }
     
     /**
