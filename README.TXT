@@ -68,6 +68,12 @@ Week 3 - Opgave 3b
     en 5(excl). Wanneer je +1 doet krijg je nummers tussen 1(incl) en 5 (incl). Als je
     hier nog het minimale getal bij doet (in dit geval 5) krijg je getallen tussen 5 en 10.
 
+Week 4 - opgave 2b
+    Vraag: Waarom moet een super aanroep in de constructor altijd bovenaan staan?
+    Als de super aanroep niet boven aan staat zal Java zelf proberen om de aanroep automatisch in te voegen. 
+    Sowieso is het een regel in blueJ en kan je niet compilen als de super aanroep niet boven aan staat. 
+    Java zal zelf super() aan de eerste regel toevoegen als het niet in de eerste regel staat.
+    Als je dus een constructor hebt met parameters zullen er geen parameters worden doorgegeven aan de constructor.
 
 Tests voor geboortedatum:
 Tests       verwachting resultaat   resultaat2

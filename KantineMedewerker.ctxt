@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=KantineMedewerker()
+comment0.text=\r\n\ Maak\ een\ nieuwe\ medewerker\ aan\ zonder\ opgegeven\ waarden.\ \r\n
+comment1.params=bsn\ voornaam\ achternaam\ geboorteDag\ geboorteMaand\ geboorteJaar\ geslacht\ medewerkersnummer\ magAchterKassa
+comment1.target=KantineMedewerker(int,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ char,\ int,\ boolean)
+comment1.text=\r\n\ Maak\ een\ nieuwe\ student\ aan\ met\ de\ opgegeven\ parameters.\r\n
+comment2.params=medewerkersnummer
+comment2.target=void\ setMedewerkersnummer(int)
+comment2.text=\r\n\ Set\ de\ medewerkersnummer\ van\ een\ kassamedewerker.\r\n\ @param\ medewerkersnummer\ medewerkersnummer\ van\ kassamedewerker\ \r\n
+comment3.params=magAchterKassa
+comment3.target=void\ setMagAchterKassa(boolean)
+comment3.text=\r\n\ Set\ de\ medewerkersnummer\ van\ een\ kassamedewerker.\ \r\n\ @param\ magAchterKassa\ bepaald\ of\ een\ kassamedewerker\ achter\ een\ kassa\ mag\ staan\ of\ niet\r\n
+comment4.params=
+comment4.target=int\ getMedewerkersnummer()
+comment4.text=\r\n\ Laat\ het\ medewerkersnummer\ van\ een\ kassamedewerker\ zien.\r\n\ @return\ het\ medewekersnummer\ van\ een\ kassamedewerker\r\n
+comment5.params=
+comment5.target=boolean\ getMagAchterKassa()
+comment5.text=\r\n\ Laat\ zien\ of\ de\ kassamedewerker\ achter\ de\ kassa\ mag\ staan\r\n\ @return\ true\ als\ de\ kassamedewerker\ achter\ de\ kassa\ mag\ staan,\ false\ als\ dat\ niet\ mag.\r\n
+comment6.params=
+comment6.target=void\ drukAf()
+comment6.text=\r\n\ Laat\ alle\ gegevens\ zien\ van\ de\ kassamedewerker\ zien.\r\n
+numComments=7

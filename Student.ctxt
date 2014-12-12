@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Student()
+comment0.text=\r\n\ Maak\ een\ nieuwe\ student\ aan\ zonder\ opgegeven\ waarden.\ \r\n
+comment1.params=bsn\ voornaam\ achternaam\ geboorteDag\ geboorteMaand\ geboorteJaar\ geslacht\ studentnummer\ studierichting
+comment1.target=Student(int,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ char,\ int,\ java.lang.String)
+comment1.text=\r\n\ Maak\ een\ nieuwe\ student\ aan\ met\ de\ opgegeven\ parameters.\r\n
+comment2.params=studentnummer
+comment2.target=void\ setStudentnummer(int)
+comment2.text=\r\n\ Set\ het\ studentennummer\ van\ een\ student.\ \r\n\ @param\ studentnummer\ het\ studenten\ nummer\ van\ een\ student\r\n
+comment3.params=studierichting
+comment3.target=void\ setStudierichting(java.lang.String)
+comment3.text=\r\n\ Set\ de\ studierichting\ van\ een\ student.\ \r\n\ @param\ studierichting\ de\ studierichting\ van\ een\ student\r\n
+comment4.params=
+comment4.target=int\ getStudentnummer()
+comment4.text=\r\n\ Laat\ het\ studentennummer\ van\ een\ student\ zien.\r\n\ @return\ het\ studentennummer\ van\ een\ student\r\n
+comment5.params=
+comment5.target=java.lang.String\ getStudierichting()
+comment5.text=\r\n\ Laat\ de\ studierichting\ van\ een\ student\ zien.\r\n\ @return\ de\ studierichting\ van\ het\ student\ \r\n
+comment6.params=
+comment6.target=void\ drukAf()
+comment6.text=\r\n\ Laat\ alle\ gegevens\ zien\ van\ de\ student\ zien.\r\n
+numComments=7

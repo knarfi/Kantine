@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Docent()
+comment0.text=\r\n\ Maak\ een\ nieuwe\ docent\ aan\ zonder\ opgegeven\ waarden.\ \r\n
+comment1.params=bsn\ voornaam\ achternaam\ geboorteDag\ geboorteMaand\ geboorteJaar\ geslacht\ afkorting\ afdeling
+comment1.target=Docent(int,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ char,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Maak\ een\ nieuwe\ docent\ aan\ met\ de\ opgegeven\ parameters.\r\n
+comment2.params=afkorting
+comment2.target=void\ setAfkorting(java.lang.String)
+comment2.text=\r\n\ Set\ de\ afkorting\ van\ een\ docent.\r\n\ @param\ afkorting\ afkorting\ van\ de\ docent\r\n
+comment3.params=afdeling
+comment3.target=void\ setAfdeling(java.lang.String)
+comment3.text=\r\n\ Set\ de\ afdeling\ van\ een\ docent.\r\n\ @param\ afdeling\ bepaal\ de\ afdeling\ van\ een\ docent\r\n
+comment4.params=
+comment4.target=java.lang.String\ getAfkorting()
+comment4.text=\r\n\ Laat\ de\ afkorting\ van\ een\ docent\ zien.\r\n\ @return\ de\ afkorting\ van\ een\ docent\r\n
+comment5.params=
+comment5.target=java.lang.String\ getAfdeling()
+comment5.text=\r\n\ Laat\ de\ afdeling\ van\ een\ docent\ zien.\r\n\ @return\ de\ afdeling\ van\ een\ docent\r\n
+comment6.params=
+comment6.target=void\ drukAf()
+comment6.text=\r\n\ Laat\ alle\ gegevens\ zien\ van\ de\ docent\ zien\ in.\r\n
+numComments=7
