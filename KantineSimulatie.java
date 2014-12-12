@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.text.DecimalFormat;
+import java.lang.Math;
 
 /**
  * Deze klasse bevat informatie over de kantineSimulatie.
@@ -109,16 +110,35 @@ public class KantineSimulatie {
     {
         //zorgt ervoor dat er 2.20 komt en niet 2.2
         DecimalFormat df = new DecimalFormat("#.00");
+        int aantalPersonen[] = new int[dagen];
+        double dagOmzetten[] = new double[dagen];
         
         // for lus voor dagen
         for(int i = 0; i < dagen; i++) {
             // bedenk hoeveel personen vandaag binnen lopen
             int aantalpersonen = getRandomValue(MIN_PERSONEN_PER_DAG, MAX_PERSONEN_PER_DAG);
             
-            // laat de personen maar komen...
+            // laat de docenten maar komen...
             for(int j = 0; j < aantalpersonen; j++) {
                 // maak persoon en dienblad aan, koppel ze
-                Persoon persoon = new Persoon();
+                Persoon persoon;
+                
+                int random = getRandomValue(1, 100);
+                String typePersoon;
+                if (random == 1) {
+                    persoon = new KantineMedewerker();
+                    typePersoon = "kantinemedewerker";
+                }
+                else if (random > 1 && random < 12) {
+                    persoon = new Docent();
+                    typePersoon = "docent";
+                }
+                else {
+                    persoon = new Student();
+                    typePersoon = "student";
+                }
+                System.out.println("Een " + typePersoon + " liep de kantine binnen.");
+                
                 persoon.pakDienblad(new Dienblad());
                 
                 // bedenk hoeveel artikelen worden gepakt
@@ -148,8 +168,38 @@ public class KantineSimulatie {
                                 " euro aan producten hebben gekocht");
             System.out.println();
             
+            aantalPersonen[i] = aantalpersonen;
+            dagOmzetten[i] = kantine.getKassa().getGeldInKassa();
+            
             // reset de kassa voor de volgende dag
             kantine.getKassa().resetKassa();
+        }
+        
+        System.out.println("Het gemiddeld aantal personen dat er in " + dagen + " dagen per dag is gekomen is " + Math.round(Administratie.berekenGemiddeldAantal(aantalPersonen)) + ".");
+        System.out.println("De gemiddelde omzet die in " + dagen + " dagen per dag is gemaakt is " + df.format(Administratie.berekenGemiddeldeOmzet(dagOmzetten)) + " euro.");
+        
+        int temp = (dagen < Administratie.DAYS_IN_WEEK - 1) ? dagen : Administratie.DAYS_IN_WEEK;
+        
+        for(int dag = 0; dag < temp; dag++){
+            String dagString;
+            switch(dag) {
+                case 0: dagString = "maandag";
+                        break;
+                case 1: dagString = "dinsdag";
+                        break;
+                case 2: dagString = "woensdag";
+                        break;
+                case 3: dagString = "donderdag";
+                        break;
+                case 4: dagString = "vrijdag";
+                        break;
+                case 5: dagString = "zaterdag";
+                        break;
+                case 6: dagString = "zondag";
+                        break;
+                default: dagString = "onbekend";
+            }
+            System.out.println("Voor alle " + dagString + "en is de totale omzet " + df.format(Administratie.berekenDagOmzet(dagOmzetten)[dag]) + " euro.");
         }
     }
 }

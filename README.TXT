@@ -67,7 +67,6 @@ Week 3 - Opgave 3b
     tussen de 5 en 10 dan krijg je 5, dit betekent dat je nummers krijgt tussen 0(incl) 
     en 5(excl). Wanneer je +1 doet krijg je nummers tussen 1(incl) en 5 (incl). Als je
     hier nog het minimale getal bij doet (in dit geval 5) krijg je getallen tussen 5 en 10.
-<<<<<<< HEAD
     
 Week 4 - Opgave 1c
     Als je zelf geen constructor maakt wordt dit voor jou gedaan.
@@ -95,9 +94,6 @@ week 4 - Opgave 1i
 week 4 - Opgave 1j
     Dat DAYS_IN_WEEK nu niet meer een constante variable is. Het doel van deze variable was een vaste
     waarde te introduceren zodat deze in de classe gebruikt kon worden, de waarde is nu niet meer vast.
-    
-    
-=======
 
 Week 4 - opgave 2b
     Vraag: Waarom moet een super aanroep in de constructor altijd bovenaan staan?
@@ -106,7 +102,7 @@ Week 4 - opgave 2b
     Java zal zelf super() aan de eerste regel toevoegen als het niet in de eerste regel staat.
     Als je dus een constructor hebt met parameters zullen er geen parameters worden doorgegeven aan de constructor.
 
->>>>>>> 4f4952e7c2085c3982ab172c1c8bcdbca88bf4e7
+
 Tests voor geboortedatum:
 Tests       verwachting resultaat   resultaat2
 19/5/2014   wel         wel         wel
