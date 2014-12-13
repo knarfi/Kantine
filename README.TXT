@@ -77,7 +77,8 @@ Week 4 - Opgave 1d
     
 Week 4 - Opgave 1e
     Als iets private is kan het alleen aangeroepen worden binnen de klas, als je dus een nieuw
-    object aanmaakt en daarmee de private constructor aanroept zal deze een fout teruggeven.
+    object aanmaakt en daarmee de private constructor aanroept zal deze een melding geven dat je
+    die constructor niet aan kan roepen en daarmee dus niet het object aan kan maken.
     
 week 4 - Opgave 1g
     zie project folder
@@ -97,7 +98,10 @@ week 4 - Opgave 1j
 
 Week 4 - opgave 2b
     Vraag: Waarom moet een super aanroep in de constructor altijd bovenaan staan?
-    Als de super aanroep niet boven aan staat zal Java zelf proberen om de aanroep automatisch in te voegen. 
+    Als de super aanroep niet boven aan staat zal Java zelf proberen om de aanroep automatisch in te voegen.
+    Super komt dus altijd voor in de constructor en dit moet anders zal de superclass nooit gemaakt. De super
+    moet daarom bovenaan omdat je eerst een superclass nodig hebt om de de class aan te maken van de constroctur
+    en die is weer nodig voordat je variablen kan gaan wijzigen of methodes aanroepen.
     Sowieso is het een regel in blueJ en kan je niet compilen als de super aanroep niet boven aan staat. 
     Java zal zelf super() aan de eerste regel toevoegen als het niet in de eerste regel staat.
     Als je dus een constructor hebt met parameters zullen er geen parameters worden doorgegeven aan de constructor.

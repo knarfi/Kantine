@@ -18,7 +18,7 @@ public class Administratie {
     
     /**     
      * Deze methode berekent van de int array aantal de gemiddelde waarde     
-     * @param aantal     
+     * @param aantal array ints waarvan het gemiddelde berekend moet worden
      * @return het gemiddelde     
      */    
     public static double berekenGemiddeldAantal(int[] aantal) {    
@@ -47,9 +47,9 @@ public class Administratie {
     }
     
     /**
-     * Methode om totalle dagomzet uit te rekenen. De teruggegeven string bevat
-     * 7 elementen die allemaal een dag voorstellen.
-     * @param omzet per dag
+     * Methode om totalle dagomzet uit te rekenen van een bepaadle periode. 
+     * De teruggegeven string bevat 7 elementen die allemaal een dag voorstellen.
+     * @param omzet per dag in een array van doubles
      * @return array (7 elementen) met dagomzetten
      */
     public static double[] berekenDagOmzet(double[] omzet) {
