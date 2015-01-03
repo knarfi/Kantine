@@ -113,7 +113,47 @@ week 5 - Opgave 1d
     of de 2 strings gelijk zijn. == Kijkt of 2 variablen naar hetzelfde object verwijzen en dat is niet het geval omdat
     er 2 verschillende variablen (=objecten) aangemaakt zijn.
     Wanneer je toch == gebruikt kan het wel werken, dit heeft met de werking van String te maken.
+    
+week 5 - Opgave 5a
+    Nee dit kan niet, omdat een interface een abstracte klasse is en van abstracte klasses kan je geen instantie maken
+    
+week 5 - Opgave 5b
+    Nee dit kan niet, omdat een abstractie klasse aangeeft dat er abstracte methodes inzit en je dus geen instantie kan maken van de klasse omdat er methodes kunnen zijn die geen body hebben.
+    
+week 5 - Opgave 5c
+    nee, java weet dan niet naar welke klasse hij moet als hij een method call van de superclass moet hebben
 
+week 5 - Opgave 5d
+    ja, want de methodes van een interface zijn allemaal abstract en moeten allemaal geoveride worden, hierdoor zijn er geen supercalls.
+    
+week 5 - Opgave 5e
+    Ja
+    
+week 5 - Opgave 5f
+    Ja dat klopt, als je een concrete methode in een interface zou hebben weet java niet of een supercall naar de interface gaat of naar de inheritance.
+    
+week 5 - Opgave 5g
+    Ja, anders kan je een instantie maken van een klasse met een methode zonder body.
+    
+week 5 - Opgave 5h
+    Polymorfisme betekend dat iets verschillende vormen kan hebben. Een klasse auto kan bijvoorbeeld een BMW zijn of een Nissan elk met zijn eigen implementatie.
+    Wanneer je klasse auto abstract maakt weet je zeker dat elke subclass van auto de methodes bevat gegeven in de superclass auto.
+    Wanneer je klasse auto een interface maakt weet je zeker dat elke subclass van auto zijn eigen implementatie van de methodes in auto bevat.
+    
+week 5 - Opgave 6a
+    Ja dit kan, omdat een abstractie klasse alleen aangeeft dat er abstracte methodes inzit en je dus geen instantie kan maken van de klasse.
+    
+week 5 - Opgave 6b
+    Nee dit hoeft niet, de subclass kan zelf ook abstract zijn. Dit is logisch omdat een subclass een specifiekere groep kan aangeven en meer details te geven maar het hoeft nog geen concreet object te zijn.
+    
+week 5 - Opgave 6c
+    Je kan de niet geimplementeerde methode en de klasse abstract maken, dit is logisch omdat je zo de implementatie 'doorschuift' naar een subclasse.
+    
+week 5 - Opgave 6d
+    Je maakt een instantie variable of je maakt hem niet en dat kan je niet doorschuiven naar een subclasse.
+    
+week 5 - Opgave 6e
+    final betekend dat de implementatie van de methode niet meer geoveride kan worden. Een methode kan dan niet abstract zijn omdat de methode dan nooit een body kan krijgen en dus nooit gebruikt kan worden.
 
 Tests voor geboortedatum:
 Tests       verwachting resultaat   resultaat2
