@@ -24,14 +24,28 @@ public class Kassa {
     }
     
     /**
-     * vraag het aantal artikelen en de totaalprijs op.
-     * De implementatie wordt later vervangen 
-     * door een echte betaling door de persoon. 
+     * laat de persoon betalen
      * @param persoon die moet afrekenen
      */
     public void rekenAf(Persoon persoon) {
         artikelenAfgerekend += artikelenOpDienblad(persoon);
-        geldInKassa += totaalPrijsDienblad(persoon);
+        Betaalwijze betaalwijze = persoon.getBetaalwijze();
+        double teBetalen = totaalPrijsDienblad(persoon);
+        if(persoon instanceof KortingskaartHouder){
+            double korting = teBetalen * (((KortingskaartHouder)persoon).geefKortingsPercentage() * 0.01);
+            if(((KortingskaartHouder)persoon).heeftMaximum()){
+                if(korting > ((KortingskaartHouder)persoon).geefMaximum()){
+                    korting = ((KortingskaartHouder)persoon).geefMaximum();
+                }
+            }
+            teBetalen -= korting;
+        }
+        
+        if (betaalwijze.betaal(teBetalen)) {
+            geldInKassa += totaalPrijsDienblad(persoon);
+        } else {
+            System.out.println("U heeft niet genoeg saldo.");
+        }
     }
     
     /**

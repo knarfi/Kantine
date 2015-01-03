@@ -99,12 +99,20 @@ week 4 - Opgave 1j
 Week 4 - opgave 2b
     Vraag: Waarom moet een super aanroep in de constructor altijd bovenaan staan?
     Als de super aanroep niet boven aan staat zal Java zelf proberen om de aanroep automatisch in te voegen.
-    Super komt dus altijd voor in de constructor en dit moet anders zal de superclass nooit gemaakt. De super
+    Super komt dus altijd voor in de constructor en dit moet anders zal de superclass nooit gemaakt worden. De super
     moet daarom bovenaan omdat je eerst een superclass nodig hebt om de de class aan te maken van de constroctur
     en die is weer nodig voordat je variablen kan gaan wijzigen of methodes aanroepen.
-    Sowieso is het een regel in blueJ en kan je niet compilen als de super aanroep niet boven aan staat. 
-    Java zal zelf super() aan de eerste regel toevoegen als het niet in de eerste regel staat.
-    Als je dus een constructor hebt met parameters zullen er geen parameters worden doorgegeven aan de constructor.
+    Sowieso is het een regel in blueJ en kan je niet compilen als de super aanroep niet boven aan staat.
+    
+week 5 - Opgave 1c
+    == Test of de variablen naar hetzelfde object verwijzen en equals(Object object) kijkt of de 2 objecten gelijk zijn(of de velden
+    hetzelfde zijn)
+    
+week 5 - Opgave 1d
+    Als je 2 strings inhoudelijk wil vergelijken moet je equals(Object object) gebruiken. Deze controleert namelijk inhoudelijk
+    of de 2 strings gelijk zijn. == Kijkt of 2 variablen naar hetzelfde object verwijzen en dat is niet het geval omdat
+    er 2 verschillende variablen (=objecten) aangemaakt zijn.
+    Wanneer je toch == gebruikt kan het wel werken, dit heeft met de werking van String te maken.
 
 
 Tests voor geboortedatum:

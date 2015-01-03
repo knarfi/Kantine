@@ -2,7 +2,7 @@
  * Deze klasse bevat informatie over de personen die werken in de kantine. 
  * 
  * @autheur Rick van der Poel en Frank Noorlander
- * @versie 29-11-2014
+ * @versie 01/01/2015 (2.0)
  */
 
 public class Persoon {
@@ -11,9 +11,10 @@ public class Persoon {
     private int bsn;
     private String voornaam;
     private String achternaam;
-    private int geboorteDag ,geboorteMaand, geboorteJaar;
+    private int geboorteDag, geboorteMaand, geboorteJaar;
     private char geslacht;
     private Dienblad dienblad;
+    private Betaalwijze betaalwijze;
     
     /**
     * Maakt een persoon aan met standaard waarden.  
@@ -229,14 +230,16 @@ public class Persoon {
     }
     
     /**
-    * laat alle gegevens zien van de persoon in een leuk en gezellig verhaaltje
+    * geeft alle gegevens zien van de persoon in een leuk en gezellig verhaaltje
+    * @return   een string met alle gegevens van de persoon
     */
-    public void drukAf()
+    public String toString()
     {
-        System.out.println("Volledige naam: " + getVoornaam() + " " + getAchternaam());
-        System.out.println("BSN nummer: " + getBSN());
-        System.out.println("Geboortedatum: " + getGeboorteDatum());
-        System.out.println("Geslacht: " + getGeslacht());
+        String details = "Volledige naam: " + getVoornaam() + " " + getAchternaam();
+        details += "BSN nummer: " + getBSN();
+        details += "Geboortedatum: " + getGeboorteDatum();
+        details += "Geslacht: " + getGeslacht();
+        return details;
     }
     
     /**
@@ -261,10 +264,52 @@ public class Persoon {
     
     /**
      * geeft het dienblad van de persoon, als er geen dienblad is komt er een null terug
-     * 
      * @return  dienblad van de persoon
      */
     public Dienblad getDienblad(){
         return dienblad;
+    }
+    
+    /**
+     * Kijkt of het gegeven object gelijk is aan dit persoon.
+     */
+    public boolean equals(Object object){
+        if(this == object) {
+            return true;
+        }
+        if(!(object instanceof Persoon)) {
+            return false;
+        }
+        
+        Persoon other = (Persoon) object;
+        return bsn == other.bsn;
+    }
+    
+    /**
+     * geeft  een unieke code terug
+     */
+    public int hashCode()
+    {
+        return bsn;
+    }
+    
+    /**
+     * Zet de betaalwijze van de persoon
+     * @param   betaalwijze     manier om te betalen (subclass van Betaalwijze)
+     */
+    public void setBetaalwijze(Betaalwijze betaalwijze){
+        this.betaalwijze = betaalwijze;
+    }
+    
+    /**
+     * Geeft de betaalwijze van de persoon
+     * @return  de betaalwijze van de persoon (subclass van Betaalwijze)
+     */
+    public Betaalwijze getBetaalwijze(){
+        if (betaalwijze != null) {
+            return betaalwijze;
+        } else {
+            return null;
+        }
     }
 }

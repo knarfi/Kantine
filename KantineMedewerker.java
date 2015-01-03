@@ -4,7 +4,7 @@
  * @autheur Rick van der Poel en Frank Noorlander
  * @versie 12-12-2014
  */
-public class KantineMedewerker extends Persoon
+public class KantineMedewerker extends Persoon implements KortingskaartHouder
 {
     private int medewerkersnummer;
     private boolean magAchterKassa;
@@ -69,10 +69,12 @@ public class KantineMedewerker extends Persoon
     }
     
     /**
-    * Laat alle gegevens zien van de kassamedewerker zien.
+    * geeft alle gegevens zien van de kantine mederwerker in een leuk en gezellig verhaaltje
+    * @return   een string met alle gegevens van de kantine medewerker
     */
-    public void drukAf()
+    public String toString()
     {
+        String details;
         String temp = "";
         //Zet de waardes "true" en "false" om in "Ja" en "Nee".
         if(getMagAchterKassa() == true){
@@ -82,8 +84,33 @@ public class KantineMedewerker extends Persoon
         }
         // Haal de persoon gegevens op uit de super klasse en voeg de specieke kassamedewerker gegevens toe
         // en print dit uit.
-        super.drukAf();
-        System.out.println("Medewerkersnummer: " + getMedewerkersnummer());
-        System.out.println("Mag achter een kassa staan: " + temp);
+        details = super.toString();
+        details += "Medewerkersnummer: " + getMedewerkersnummer();
+        details += "Mag achter een kassa staan: " + temp;
+        return details;
+    }
+    
+    /**
+     * geeft het kortingspercentage wat de kantinemedewerker krijgt aan de kassa
+     * @return korting
+     */
+    public double geefKortingsPercentage(){
+        return 35.0;
+    }
+    
+    /**
+     * kijkt of de kantinemedewerker een maximum kortingsbedrag heeft
+     * @return false als er geen kortingsbedrag is en true als er een kortingsbedrag is
+     */
+    public boolean heeftMaximum(){
+        return false;
+    }
+    
+    /**
+     * geeft kortingsbedrag van de kantinemederwerk
+     * @return kortingsbedrag
+     */
+    public double geefMaximum(){
+        return -1;
     }
 }

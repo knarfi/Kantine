@@ -137,24 +137,40 @@ public class KantineSimulatie {
                     persoon = new Student();
                     typePersoon = "student";
                 }
-                System.out.println("Een " + typePersoon + " liep de kantine binnen.");
                 
                 persoon.pakDienblad(new Dienblad());
+                
+                //betaalwijze bepalen en toewijzen aan de persoon
+                Betaalwijze betaalwijze;
+                String typeBetaalwijze;
+                random = getRandomValue(1, 2);
+                if (random == 1) {
+                    betaalwijze = new Contant();
+                    typeBetaalwijze = "contant";
+                } else {
+                    betaalwijze = new Pinpas();
+                    ((Pinpas)betaalwijze).setKredietLimiet(getRandomValue(-200, 0));
+                    typeBetaalwijze = "pinpas";
+                }
+                persoon.setBetaalwijze(betaalwijze);
+                
+                //saldo bepalen en toewijzen aan de persoon
+                betaalwijze.setSaldo(getRandomValue(2, 200));
                 
                 // bedenk hoeveel artikelen worden gepakt
                 int aantalartikelen = getRandomValue(MIN_ARTIKELEN_PER_PERSOON, MAX_ARTIKELEN_PER_PERSOON);
                 
-                // genereer de “artikelnummers”, dit zijn indexen 
-                // van de artikelnamen array  
+                // genereer de “artikelnummers”, dit zijn indexen van de artikelnamen array  
                 int[] tepakken = getRandomArray(aantalartikelen, 0, AANTAL_ARTIKELEN-1);
                 
                 // vind de artikelnamen op basis van 
                 // de indexen hierboven
                 String[] artikelen = geefArtikelNamen(tepakken);
                 
-                // loop de kantine binnen, pak de gewenste 
-                // artikelen, sluit aan
+                // loop de kantine binnen, pak de gewenste artikelen, sluit aan
                 kantine.loopPakSluitAan(persoon, artikelen);
+                
+                System.out.println("Een " + typePersoon + " liep de kantine binnen.");
             }
             
             // verwerk rij voor de kassa

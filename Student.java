@@ -68,12 +68,15 @@ public class Student extends Persoon
     }
     
     /**
-    * Laat alle gegevens zien van de student zien.
+    * geeft alle gegevens zien van de student in een leuk en gezellig verhaaltje
+    * @return   een string met alle gegevens van de student
     */
-    public void drukAf()
+    public String toString()
     {
-        super.drukAf();
-        System.out.println("Studentnummer: " + getStudentnummer());
-        System.out.println("Studierichting: " + getStudierichting());
+        String details;
+        details  = super.toString();
+        details += "Studentnummer: " + getStudentnummer();
+        details += "Studierichting: " + getStudierichting();
+        return details;
     }
 }
