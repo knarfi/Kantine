@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TeWeinigGeldException()
+comment1.params=e
+comment1.target=TeWeinigGeldException(java.lang.Exception)
+comment2.params=foutmelding
+comment2.target=TeWeinigGeldException(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getFoutmelding()
+numComments=4

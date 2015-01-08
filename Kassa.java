@@ -4,7 +4,7 @@ import java.util.Iterator;
  * Deze klasse bevat informatie over hoe de kassa werkt. 
  * 
  * @autheur Rick van der Poel en Frank Noorlander
- * @versie 29-11-2014
+ * @versie 08-01-2015
  */
 
 public class Kassa {
@@ -26,8 +26,9 @@ public class Kassa {
     /**
      * laat de persoon betalen
      * @param persoon die moet afrekenen
+     * @throws TeWeinigGeldException Als er te weinig geld is om te betalen.
      */
-    public void rekenAf(Persoon persoon) {
+    public void rekenAf(Persoon persoon) throws TeWeinigGeldException {
         artikelenAfgerekend += artikelenOpDienblad(persoon);
         Betaalwijze betaalwijze = persoon.getBetaalwijze();
         double teBetalen = totaalPrijsDienblad(persoon);
@@ -41,10 +42,13 @@ public class Kassa {
             teBetalen -= korting;
         }
         
-        if (betaalwijze.betaal(teBetalen)) {
+        try {
+            betaalwijze.betaal(teBetalen);
+            
             geldInKassa += totaalPrijsDienblad(persoon);
-        } else {
-            System.out.println("U heeft niet genoeg saldo.");
+        }
+        catch(TeWeinigGeldException e) {
+            throw new TeWeinigGeldException(persoon.getVoornaam() + " " + persoon.getAchternaam() + " heeft niet genoeg salso om te betalen");
         }
     }
     

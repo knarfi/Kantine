@@ -1,8 +1,8 @@
 /**
  * Omschrijft hoe een persoon met pinpas kan betalen.
  * 
- * @author Frank Noorlander
- * @version 1.0 (30/12/2014)
+ * @author Frank Noorlander en Rick van der Poel
+ * @version 1.1 (08/01/2015)
  */
 public class Pinpas extends Betaalwijze {
     private double kredietlimiet;
@@ -11,19 +11,21 @@ public class Pinpas extends Betaalwijze {
     * Methode om kredietlimiet te zetten
     * @param kredietlimiet
     */
-    public void setKredietLimiet(double kredietlimiet) {
+    public void setKredietLimiet(double kredietlimiet) 
+    {
         this.kredietlimiet = kredietlimiet;
     }
     
     /**
     * Methode om betaling af te handelen
+    * @throws TeWeinigGeldException Als er te weinig geld is om te betalen.
     */
-    public boolean betaal(double tebetalen) {
-        if(kredietlimiet <= saldo - tebetalen) {
+    public void betaal(double tebetalen) throws TeWeinigGeldException 
+    {
+        if((saldo + kredietlimiet) >= tebetalen) {
             saldo -= tebetalen;
-            return true;
-        } else {
-            return false;
+            return;
         }
+        throw new TeWeinigGeldException(); 
     }
 }

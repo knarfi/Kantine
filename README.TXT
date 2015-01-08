@@ -154,6 +154,22 @@ week 5 - Opgave 6d
     
 week 5 - Opgave 6e
     final betekend dat de implementatie van de methode niet meer geoveride kan worden. Een methode kan dan niet abstract zijn omdat de methode dan nooit een body kan krijgen en dus nooit gebruikt kan worden.
+    
+    
+week 6 - Opgave 1b en c
+    Notities voor morgen te bespreken: 
+    - Klasse TeWeinigGeldException met drie constructors aangemaakt
+    - Klasse Betaalwijze (public void betaal) aangepast
+    - Klasse Contant en Pinpas (public void betaal) aangepast
+    - Klasse Kassa (rekenAf methode) aangepast
+    - Klasse Kantine (verwerkRijVoorKassa) aangpast
+    - Klasse KantineSimulatie (verwerkRijVoorKassa in loop) aangepast
+
+    - Alles compileerd alleen tijdens de simulatie gaat nog iets mis.
+    Nadat iedereen is binnen gekomen wordt er niet voor iedere persoon geittereerd of ze voldoende saldo hebben. 
+    
+   
+    
 
 Tests voor geboortedatum:
 Tests       verwachting resultaat   resultaat2

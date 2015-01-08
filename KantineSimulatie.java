@@ -7,7 +7,7 @@ import java.lang.Math;
  * Deze klasse simuleert de werking van een kantine.
  * 
  * @autheur Frank Noorlander & Rick van der Poel
- * @versie 08/12/2014
+ * @versie 08/01/2015
  */
 
 public class KantineSimulatie {
@@ -174,8 +174,13 @@ public class KantineSimulatie {
             }
             
             // verwerk rij voor de kassa
-            kantine.verwerkRijVoorKassa();
+            try {
+                kantine.verwerkRijVoorKassa();
+            }
             
+            catch(TeWeinigGeldException e) {
+                System.out.println(e.getFoutmelding());
+            }
             // druk de dagtotalen af en hoeveel personen binnen 
             // zijn gekomen
             System.out.println("Dag: " + (i + 1));
