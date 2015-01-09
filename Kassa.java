@@ -28,7 +28,7 @@ public class Kassa {
      * @param persoon die moet afrekenen
      * @throws TeWeinigGeldException Als er te weinig geld is om te betalen.
      */
-    public void rekenAf(Persoon persoon) throws TeWeinigGeldException {
+    public void rekenAf(Persoon persoon) {
         artikelenAfgerekend += artikelenOpDienblad(persoon);
         Betaalwijze betaalwijze = persoon.getBetaalwijze();
         double teBetalen = totaalPrijsDienblad(persoon);
@@ -46,9 +46,10 @@ public class Kassa {
             betaalwijze.betaal(teBetalen);
             
             geldInKassa += totaalPrijsDienblad(persoon);
+            System.out.println(persoon.getVoornaam() + " " + persoon.getAchternaam() + " heeft betaald en verlaat de kantine");
         }
         catch(TeWeinigGeldException e) {
-            throw new TeWeinigGeldException(persoon.getVoornaam() + " " + persoon.getAchternaam() + " heeft niet genoeg salso om te betalen");
+            System.out.println(persoon.getVoornaam() + " " + persoon.getAchternaam() + " " + e.getFoutmelding());
         }
     }
     

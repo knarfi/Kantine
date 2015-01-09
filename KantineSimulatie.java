@@ -149,13 +149,13 @@ public class KantineSimulatie {
                     typeBetaalwijze = "contant";
                 } else {
                     betaalwijze = new Pinpas();
-                    ((Pinpas)betaalwijze).setKredietLimiet(getRandomValue(-200, 0));
+                    ((Pinpas)betaalwijze).setKredietLimiet(getRandomValue(0, 0));
                     typeBetaalwijze = "pinpas";
                 }
                 persoon.setBetaalwijze(betaalwijze);
                 
                 //saldo bepalen en toewijzen aan de persoon
-                betaalwijze.setSaldo(getRandomValue(2, 200));
+                betaalwijze.setSaldo(getRandomValue(1, 50));
                 
                 // bedenk hoeveel artikelen worden gepakt
                 int aantalartikelen = getRandomValue(MIN_ARTIKELEN_PER_PERSOON, MAX_ARTIKELEN_PER_PERSOON);
@@ -174,13 +174,8 @@ public class KantineSimulatie {
             }
             
             // verwerk rij voor de kassa
-            try {
-                kantine.verwerkRijVoorKassa();
-            }
+            kantine.verwerkRijVoorKassa();
             
-            catch(TeWeinigGeldException e) {
-                System.out.println(e.getFoutmelding());
-            }
             // druk de dagtotalen af en hoeveel personen binnen 
             // zijn gekomen
             System.out.println("Dag: " + (i + 1));

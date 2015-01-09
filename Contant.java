@@ -15,6 +15,6 @@ public class Contant extends Betaalwijze {
             saldo -= tebetalen;
             return;
         }
-        throw new TeWeinigGeldException();
+        throw new TeWeinigGeldException("heeft niet genoeg contant geld om te betalen.");
     }
 }
