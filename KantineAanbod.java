@@ -99,4 +99,13 @@ public class KantineAanbod {
             aanbod.get(naam).add(new Artikel(naam, prijs));
         }
     }
+    
+    /**
+     * voegt een aritkel toe aan het kantineaanbod
+     * @param   artikelen artikelen om toe te voegen aan het kantineaanbod
+     */
+    public void voegArtikelToe(ArrayList<Artikel> artikelen){
+        String artikelnaam = artikelen.get(0).getNaam();
+        aanbod.put(artikelnaam, artikelen);
+    }
 }

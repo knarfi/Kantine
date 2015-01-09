@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.text.DecimalFormat;
 import java.lang.Math;
+import java.util.ArrayList;
 
 /**
  * Deze klasse bevat informatie over de kantineSimulatie.
@@ -28,7 +29,7 @@ public class KantineSimulatie {
     new String[] {"Koffie", "Broodje hamburger", "Broodje kaas", "Melk", "Water", "Snelle Jelle"};
     
     // prijzen
-    private static double[] artikelprijzen =
+    private static final double[] artikelprijzen =
     new double[]{1.50, 2.10, 1.65, 1.65, 1,00, 2,50};   
     
     // minimum en maximum aantal artikelen per soort
@@ -149,13 +150,13 @@ public class KantineSimulatie {
                     typeBetaalwijze = "contant";
                 } else {
                     betaalwijze = new Pinpas();
-                    ((Pinpas)betaalwijze).setKredietLimiet(getRandomValue(0, 0));
+                    ((Pinpas)betaalwijze).setKredietLimiet(getRandomValue(-200, 0));
                     typeBetaalwijze = "pinpas";
                 }
                 persoon.setBetaalwijze(betaalwijze);
                 
                 //saldo bepalen en toewijzen aan de persoon
-                betaalwijze.setSaldo(getRandomValue(1, 50));
+                betaalwijze.setSaldo(getRandomValue(1, 100));
                 
                 // bedenk hoeveel artikelen worden gepakt
                 int aantalartikelen = getRandomValue(MIN_ARTIKELEN_PER_PERSOON, MAX_ARTIKELEN_PER_PERSOON);
@@ -217,5 +218,20 @@ public class KantineSimulatie {
             }
             System.out.println("Voor alle " + dagString + "en is de totale omzet " + df.format(Administratie.berekenDagOmzet(dagOmzetten)[dag]) + " euro.");
         }
+    }
+    
+    /**
+     * Voegt een artikel toe aan de simulatie
+     * @param   naam    naam van het artikel
+     * @param   prijs   prijs van het artikel
+     * @param   aantal  aantal artikelen dat toegevoegd moet worden
+     */
+    public void voegArtikelToe(String naam, double prijs, int aantal){
+        ArrayList<Artikel> artikelen = new ArrayList<Artikel>();
+        for(int i = 0; i < aantal; i++){
+            Artikel artikel = new Artikel(naam, prijs);
+            artikelen.add(artikel);
+        }
+        kantineaanbod.voegArtikelToe(artikelen);
     }
 }

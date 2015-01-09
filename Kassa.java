@@ -46,10 +46,10 @@ public class Kassa {
             betaalwijze.betaal(teBetalen);
             
             geldInKassa += totaalPrijsDienblad(persoon);
-            System.out.println(persoon.getVoornaam() + " " + persoon.getAchternaam() + " heeft betaald en verlaat de kantine");
         }
         catch(TeWeinigGeldException e) {
             System.out.println(persoon.getVoornaam() + " " + persoon.getAchternaam() + " " + e.getFoutmelding());
+            //dieblad + artikelen terug
         }
     }
     
