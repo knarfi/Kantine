@@ -168,7 +168,7 @@ week 6 - Opgave 1b en c
     - Alles compileerd alleen tijdens de simulatie gaat nog iets mis.
     Nadat iedereen is binnen gekomen wordt er niet voor iedere persoon geittereerd of ze voldoende saldo hebben. 
     
-   
+   - test met eclipse 
     
 
 Tests voor geboortedatum:
